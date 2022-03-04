@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(255, 255, 255);
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
@@ -30,14 +30,71 @@ nav {
   display: flex;
   justify-content: center;
 }
+.front-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 90vh;
+}
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#container{
+  border: 1px solid rgb(245, 245, 245);
+  
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px rgb(241, 241, 241);
+  padding: 5rem;
+  padding-top: 2.5rem;
+}
+
+#text-head{
+  margin-bottom: -20px;
+  }
+
+
+@media only screen and (min-width: 600px)  {
+
+  .front-page{
+    display: flex;
+    flex-direction: row;
+  }
+  .front-page-text{
+    margin-top: -30px;
+    margin-right: 100px;
+  }
+  #text-head{
+    margin-bottom: -20px;
+    }
+  #login{
+    
+    
+  }
+
+  #container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+
+
 }
