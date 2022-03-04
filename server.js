@@ -7,6 +7,8 @@ import session from 'express-session'
 import logger from 'morgan'
 import methodOverride from 'method-override'
 import passport from 'passport'
+import { router as homesRouter } from './routes/homes.js'
+import { passUserToView } from './middleware/middleware.js'
 
 // connect to MongoDB with mongoose
 import('./config/database.js')
@@ -39,6 +41,8 @@ app.use(
   )
 )
 
+app.use('/homes', homesRouter)
+
 // session middleware
 app.use(
   session({
@@ -55,9 +59,13 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
+
+// custom middleware
+app.use(passUserToView)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
