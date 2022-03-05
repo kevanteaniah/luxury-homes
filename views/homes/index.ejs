@@ -1,17 +1,34 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
+<div class="index-body"></div>
+<div class="add-home">
+  <h1><%= title %> </h1>
+  <% if (user) { %>
+    <div class="textbox">
+      <input type="text" name="location" placeholder="City/State" autocomplete="off" required>
+    </div>
+    <div class="textbox">
+      <input type="number" name="price" placeholder="Price" autocomplete="off" required>
+    </div>
+    <div class="textbox">
+      <input type="number" name="bedrooms" placeholder="How many bedrooms?" autocomplete="off" required>
+    </div>
+    <div class="textbox">
+      <input type="number" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" required>
+    </div>
+    <input class="btn" type="button" value="Add a home">
+</div>
+<% } %>
 
-
-
-<section>
+<!-- <section>
   <h1><%= title %> </h1>
   <% if (user) { %>
     <h2>Add a Home!</h2>
     <form id="front-page-form" action="/homes" method="POST">
       <label>
-        City: 
-        <input type="text" name="city" autocomplete="off">
+        Location: 
+        <input type="text" name="location" autocomplete="off">
       </label>
       <label>
         Price: 
@@ -27,7 +44,7 @@
       </label>
       <button type="submit">Add</button>
     </form>
-  <% } %>
+  <% } %> -->
 
   <section>
     <h1>Homes</h1>
@@ -35,7 +52,7 @@
     <ul>
       
     <% homes.forEach(home => { %>
-      <a href="/homes/<%= home._id %> "><div></div><li><%= home.city %> $<%= home.price %></li></div></a>
+      <a href="/homes/<%= home._id %> "><div></div><li><%= home.location %> $<%= home.price %></li></div></a>
     <% }) %>
     </ul>
   </section>

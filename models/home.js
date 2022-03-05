@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const homeSchema = new Schema({
-  city: String,
+  location: String,
   price: Number,
   bedrooms: Number,
   bathrooms: Number,

@@ -6,7 +6,7 @@ function index(req, res) {
     res.render('homes/index', {
       homes,
       title: 'Homes',
-      city: 'city',
+      location: 'location',
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
@@ -38,7 +38,7 @@ function show(req,res){
     res.render('homes/show', {
       home,
       title: 'Homes',
-      city: 'city',
+      location: 'location',
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
@@ -52,10 +52,10 @@ function show(req,res){
 function edit(req,res){
   Home.findById(req.params.id)
   .then(home =>{
-    res.render('home/edit', {
+    res.render('homes/edit', {
       home,
       title: 'Homes',
-      city: 'city',
+      location: 'location',
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
@@ -66,9 +66,47 @@ function edit(req,res){
   })
 }
 
+function update(req,res){
+  Home.findById(req.params.id)
+  .then(home =>{ 
+    if(home.owner.equals(req.user.profile._id)){
+      home.updateOne(req.body, {new: true})
+      .then(()=> {
+        res.redirect(`/homes/${home._id}`)
+      })
+      } else {
+        throw new Error ('Who Are You Bro')
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/homes')
+    })
+}
+
+function deleteHome(req,res){
+  Home.findById(req.params.id)
+  .then(home => {
+    if (home.owner.equals(req.user.profile._id)){
+      home.delete()
+      .then(() => {
+        res.redirect('homes')
+      })
+    } else {
+      throw new Error ('You can not delete this!!!')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/homes')
+  })
+}
+
 export {
   index,
   create,
   show,
   edit,
+  update,
+  deleteHome as delete,
 }
