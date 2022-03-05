@@ -2,8 +2,41 @@
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
 
-<main>
-  <h1>Homes</h1>
-</main>
+
+
+<section>
+  <h1><%= title %> </h1>
+  <% if (user) { %>
+    <h2>Add a Home!</h2>
+    <form id="front-page-form" action="/homes" method="POST">
+      <label>
+        City: 
+        <input type="text" name="city" autocomplete="off">
+      </label>
+      <label>
+        Price: 
+        <input type="text" name="price" autocomplete="off">
+      </label>
+      <label>
+        Bedrooms: 
+        <input type="text" name="bedrooms" autocomplete="off">
+      </label>
+      <label>
+        Bathrooms: 
+        <input type="text" name="bathrooms" autocomplete="off">
+      </label>
+      <button type="submit">Add</button>
+    </form>
+  <% } %>
+
+  <section>
+    <h1>Homes</h1>
+    <h2>All the Homes!</h2>
+    <ul>
+    <% homes.forEach(home => { %>
+      <a href="/homes/<%= home._id %> "><li>🌮 <%= home.city %> <%= home.price %></li></a>
+    <% }) %>
+    </ul>
+  </section>
 
 <%- include('../partials/footer') %>
