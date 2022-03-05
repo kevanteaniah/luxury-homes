@@ -36,13 +36,33 @@ function show(req,res){
   .populate("owner")
   .then(home => {
     res.render('homes/show', {
-      homes,
+      home,
       title: 'Homes',
       city: 'city',
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
     })
+  }) .catch(err => {
+    console.log(err)
+    res.redirect('/homes')
+  })
+}
+
+function edit(req,res){
+  Home.findById(req.params.id)
+  .then(home =>{
+    res.render('home/edit', {
+      home,
+      title: 'Homes',
+      city: 'city',
+      price: 'price',
+      bedrooms: 'bedrooms',
+      bathrooms: 'bathrooms',
+    })
+  }) .catch(err => {
+    console.log(err)
+    res.redirect('/homes')
   })
 }
 
@@ -50,4 +70,5 @@ export {
   index,
   create,
   show,
+  edit,
 }

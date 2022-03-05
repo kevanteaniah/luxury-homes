@@ -6,7 +6,9 @@ const router = Router()
 
 router.get('/', homesCtrl.index)
 
-router.get('/:id', homesCtrl.show)
+router.get('/:id', isLoggedIn, homesCtrl.show)
+
+router.get('/:id/edit', isLoggedIn, homesCtrl.edit)
 
 router.post('/', isLoggedIn, homesCtrl.create)
 

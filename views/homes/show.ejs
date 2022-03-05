@@ -3,10 +3,19 @@
 <%- include('../partials/nav') %>
 
 <section>
-	<p>From the kitchen of <%= taco.owner.name %>...</p>
-  <h1><%= home.city %</h1>
-  <h2><%= home.price %></h2>
+	
+<h1><%= home.city %> </h1>
+
+<% if (home.owner.equals(user?.profile._id)) { %>
+  <form action="/homes/<%= home._id %>/edit" method="GET">
+    <button class="btn" type="submit">Edit this House</button>
+  </form>
+<% } %>
 </section>
+
+
+
+
 
 
 

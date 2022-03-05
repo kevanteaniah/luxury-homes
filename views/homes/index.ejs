@@ -33,8 +33,9 @@
     <h1>Homes</h1>
     <h2>All the Homes!</h2>
     <ul>
+      
     <% homes.forEach(home => { %>
-      <a href="/homes/<%= home._id %> "><li>🌮 <%= home.city %> <%= home.price %></li></a>
+      <a href="/homes/<%= home._id %> "><div></div><li><%= home.city %> $<%= home.price %></li></div></a>
     <% }) %>
     </ul>
   </section>
