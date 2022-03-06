@@ -69,13 +69,9 @@ main {
   
 }
 
-h1 {
-  font-size: 5rem;
-}
 
-h2 {
-  font-size: 2rem;
-}
+
+
 
 
 
@@ -106,9 +102,24 @@ h2 {
     margin-bottom: 5px;
   }
 
-  .add-home-link{
+  #add-home-link{
+    
+    padding: 5px;
+    background-color: rgb(4, 201, 236);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 4px -1px rgba(184, 182, 182, 0.25);
+  }
+  .add-home-link:visited{
     
   }
+  #add-home-link:hover{
+  transform: scale(1.1);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 217, 255);
+  }
+  
 
 @media only screen and (min-width: 600px)  {
 
@@ -161,6 +172,15 @@ h2 {
     font-size: 1.2rem;
   }
 
+  #text-head{
+    margin-top: 30px;
+  }
+
+  #login-text{
+    margin-top:30px;
+    font-size: 1.5rem;
+  }
+
   .textBx{
     width: 30vw;
     height: 100vh;
@@ -184,3 +204,4 @@ h2 {
 
 
 }
+
