@@ -3,16 +3,45 @@
   <% } %>
 </head>
 <body>
-  <nav>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
+<div class="blast">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Luxury Homes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a id="links" class="nav-link active" aria-current="page" href="#">Add a Home</a>
+          <% if (user) { %>
+            <a href="/auth/logout" id="links" class="nav-link active" aria-current="page">Logout</a>
+          <% } else { %>
+            <a href="/auth/google" class="logout" id="links" >
+              <button type="submit" class="siwg">
+                <img id="siwg-image" alt="Sign in with Google" />
+              </button>
+            </a>
+          <% } %>
+        </div>
+      </div>
+    </div>
   </nav>
+</div>
+  
+<!-- <div id="navbar">
+  <nav>
+    <div class="logo">logo</div>
+    <ul class="links">
+    <li><a href="#"></a>All homes</a></li>
+      <li><% if (user) { %>
+        <a href="/auth/logout">Logout</a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+      <% } %></li>
+    </ul>
+  </nav>
+</div> -->

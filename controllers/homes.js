@@ -89,6 +89,7 @@ function deleteHome(req,res){
   .then(home => {
     if (home.owner.equals(req.user.profile._id)){
       home.delete()
+      home.save()
       .then(() => {
         res.redirect('homes')
       })
