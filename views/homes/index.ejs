@@ -1,23 +1,31 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
-<div class="index-body"></div>
-<div class="add-home">
-  <h1><%= title %> </h1>
-  <% if (user) { %>
-    <div class="textbox">
-      <input type="text" name="location" placeholder="City/State" autocomplete="off" required>
-    </div>
-    <div class="textbox">
-      <input type="number" name="price" placeholder="Price" autocomplete="off" required>
-    </div>
-    <div class="textbox">
-      <input type="number" name="bedrooms" placeholder="How many bedrooms?" autocomplete="off" required>
-    </div>
-    <div class="textbox">
-      <input type="number" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" required>
-    </div>
-    <input class="btn" type="button" value="Add a home">
+<div class="index-body">
+  <div class="add-home">
+    <% if (user) { %>
+      <div class="left"></div>
+      <div class="right">
+        <h2>Add a Home</h2>
+        <form id="front-page-form" action="/homes" method="POST">
+          <input class="field" type="text" name="location" placeholder="City/State" autocomplete="off" required>
+          <input class="field" type="number" name="price" placeholder="Price" autocomplete="off" required>
+          <input class="field" type="number" name="bedrooms" placeholder="Price" autocomplete="off" required>
+          <input class="field" type="number" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" required>
+          <button type="submit">Add</button>
+      </form>
+    </div>  
+    <div>
+    <h1>Homes</h1>
+    <h2>All the Homes!</h2>
+    <ul>
+      
+    <% homes.forEach(home => { %>
+      <a href="/homes/<%= home._id %> "><div></div><li><%= home.location %> $<%= home.price %></li></div></a>
+    <% }) %>
+    </ul>
+  </section>
+</div>
 </div>
 <% } %>
 
@@ -46,7 +54,7 @@
     </form>
   <% } %> -->
 
-  <section>
+  <!-- <section>
     <h1>Homes</h1>
     <h2>All the Homes!</h2>
     <ul>
@@ -55,6 +63,6 @@
       <a href="/homes/<%= home._id %> "><div></div><li><%= home.location %> $<%= home.price %></li></div></a>
     <% }) %>
     </ul>
-  </section>
+  </section> -->
 
 <%- include('../partials/footer') %>
