@@ -15,7 +15,7 @@ const homeSchema = new Schema({
   link: String,
   sold: Boolean,
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
-  amenities: [amenitySchema]
+  amenities: [amenitySchema],
 })
 
 const Home = mongoose.model('Home', homeSchema)

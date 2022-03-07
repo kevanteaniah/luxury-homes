@@ -26,13 +26,16 @@
     </div>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis voluptatum repellat itaque sunt dicta architecto eum fugit illum necessitatibus nobis deleniti sint neque, quod quae voluptatem laboriosam aut commodi?</p>
     <p class="card-text">
+      <ul>
       <% if (home.amenities.length) { %>
         <% home.amenities.forEach(function(amenity) { %>
+          
         <li id="amen-results"><h3><%= amenity.type %></h3></li>
         <% }) %>
         <% } else { %>
           <li><h3>No Amenities</h3></li>
         <% } %>
+      </ul>
   </div>
 </div>
 </div>
@@ -48,8 +51,8 @@
 action="/homes/<%= home._id %>/amenities" 
 method="post"
 >
-  <input type="text" id="amenities">
-  <div  >
+  <input name="type" type="text" id="amenities">
+  <div id="addAmen" class="blue-add-btn">
   <button type="submit" class="btn btn-primary" id="admen-button" >Add Amenity</button>
 </div>
 </form>

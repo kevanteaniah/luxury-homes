@@ -16,7 +16,7 @@ router.post('/:id/amenities', isLoggedIn, homesCtrl.createAmenity)
 
 router.put('/:id', isLoggedIn, homesCtrl.update)
 
-router.delete('/id', isLoggedIn, homesCtrl.delete)
+router.delete('/:id', isLoggedIn, homesCtrl.delete)
 
 
 
