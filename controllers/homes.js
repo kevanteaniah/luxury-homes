@@ -31,9 +31,10 @@ function create(req,res){
   })
 }
 
+
 function show(req,res){
   Home.findById(req.params.id)
-  .populate("owner")
+  .populate("amenities")
   .then(home => {
     res.render('homes/show', {
       home,
@@ -42,6 +43,7 @@ function show(req,res){
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
+      amenities: 'amenities',
     })
   }) .catch(err => {
     console.log(err)
@@ -59,6 +61,7 @@ function edit(req,res){
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
+      amenity: 'amenity',
     })
   }) .catch(err => {
     console.log(err)
@@ -103,6 +106,15 @@ function deleteHome(req,res){
   })
 }
 
+function createAmenity(req,res){
+  Home.findById(req.params.id, function(err, home){
+    home.amenities.push(req.body)
+    home.save(function(err){
+      res.redirect(`/homes/${home._id}`)
+    })
+  })
+}
+
 export {
   index,
   create,
@@ -110,4 +122,5 @@ export {
   edit,
   update,
   deleteHome as delete,
+  createAmenity,
 }

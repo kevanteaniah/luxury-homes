@@ -1,22 +1,52 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
-
-<section>
-	
-<h1><%= home.location %> </h1>
-
 <% if (home.owner.equals(user?.profile._id)) { %>
   <form action="/homes/<%= home._id %>/edit" method="GET">
     <button class="btn" type="submit">Edit this House</button>
   </form>
   <form action="/homes/<%= home._id %>?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Delete this House💀</button>
+    <button class="btn" type="submit">Delete this House</button>
   </form>
 <% } %>
 
+<div id="show-cards">
+<div class="card mb-3">
+  <img class="card-img-top" src="/images/New Project (2).png" alt="Card image cap">
+  <div class="card-body">
+    <div id="show-display">
+      <div><h5 class="card-title"><%= home.location %></h5></div>
+      <div><h5 class="card-title">Price: <span>$<%= home.price %></div>
+      <div><h5 class="card-title">Bedrooms: <span><%= home.bedrooms %></div>
+      <div><h5 class="card-title">Bathrooms: <span><%= home.bathrooms %></div>
+    </div>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis voluptatum repellat itaque sunt dicta architecto eum fugit illum necessitatibus nobis deleniti sint neque, quod quae voluptatem laboriosam aut commodi?</p>
+    <p class="card-text">
+      <% if (home.amenities.length) { %>
+        <% home.amenities.forEach(function(amenity) { %>
+        <li id="amen-results"><h3><%= amenity.type %></h3></li>
+        <% }) %>
+        <% } else { %>
+          <li><h3>No Amenities</h3></li>
+        <% } %>
+  </div>
+</div>
+</div>
+
+<section>
 
 </section>
+
+<div class="amen-form">
+  <h3>Add Amenities</h3>
+<form 
+action="/homes/<%= home._id %>/amenities" 
+method="post"
+>
+  <input type="text" id="amenities">
+  <button type="submit" id="admen-button">Add Amenity</button>
+</form>
+</div>
 
 
 

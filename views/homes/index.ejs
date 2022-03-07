@@ -1,14 +1,14 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
-<div class="content">
+<div class="content visible">
   <div class="imgBox">
     <div class="textBx">
       <h2 id="welcome">Welcome to Luxury<br><span>The best properties of today</span></h2>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem expedita est doloribus molestias, minima corporis animi dolore eveniet libero, consequuntur ipsa reiciendis nihil cum eos voluptates atque odio officia. </p>
       <div class="button-home">
-        <a href="#" id="add-home-link">Add a Home</a>
-        <a href="#" id="add-home-link">View All homes</a>
+        <a href="#add-a-house" id="add-home-link">Add a Home</a>
+        <a href="#add-home" id="add-home-link">View All homes</a>
       </div>
       
 
@@ -16,100 +16,65 @@
   </div>
   
 </div>
-
-<div class="split-screen">
+<a id="add-a-house"></a>
+<div class="split-screen" id="split-screen">
   <div class="left">
+    
     <section class="copy">
-      <h1>Add a house here</h1>
-      <p>lets get it dude</p>
+      <h1>Add a Property here</h1>
+      <p>Your Journey starts Now</p>
     </section>
   </div>
+  <% if (user) { %>
   <div class="right">
-    <form action="">
+    <form action="/homes" action="/homes" method="POST">
       <section class="copy">
         <h2>Add a House</h2>
       </section>
       <div class="input-container name">
         <label for="location">Location</label>
-        <input type="text" name="location" id="location">
+        <input type="text" name="location" id="location" placeholder="City/State" autocomplete="off" required>
       </div>
       <div class="input-container name">
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location">
+        <label for="price">Price</label>
+        <input type="text" name="price" placeholder="Price" autocomplete="off" id="price" required>
       </div>
       <div class="input-container name">
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location">
+        <label for="bedrooms">Bedrooms</label>
+        <input type="text" name="bedrooms" placeholder="How many bedrooms?" autocomplete="off" id="bedrooms" required >
       </div>
       <div class="input-container name">
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location">
+        <label for="bathrooms">Bathrooms</label>
+        <input type="text" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" id="location" required > 
       </div>
+      <div class="submit">
+        <button type="submit" class="submit">Add</button>
+      </div> 
     </form>
   </div>
 </div>
 
-<div class="index-body">
-  <div class="add-home">
-    <% if (user) { %>
-      
-        <h2>Add a Home</h2>
-        <form id="front-page-form" action="/homes" method="POST">
-        <div><input class="field" type="text" name="location" placeholder="City/State" autocomplete="off" required>
-        </div>
-        <div>
-          <input class="field" type="text" name="price" placeholder="Price" autocomplete="off" required>
-        </div> 
-
-          <div>
-          <input class="field" type="text" name="bedrooms" placeholder="Price" autocomplete="off" required>
-        </div> 
-
-          <div>
-          <input class="field" type="text" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" required>
-        </div> 
-          <div>
-          <button type="submit">Add</button>
-        </div> 
-      </form>
-    </div>  
-</div>
 <% } %>
 
-<!-- <section>
-  <h1><%= title %> </h1>
-  <% if (user) { %>
-    <h2>Add a Home!</h2>
-    <form id="front-page-form" action="/homes" method="POST">
-      <label>
-        Location: 
-        <input type="text" name="location" autocomplete="off">
-      </label>
-      <label>
-        Price: 
-        <input type="text" name="price" autocomplete="off">
-      </label>
-      <label>
-        Bedrooms: 
-        <input type="text" name="bedrooms" autocomplete="off">
-      </label>
-      <label>
-        Bathrooms: 
-        <input type="text" name="bathrooms" autocomplete="off">
-      </label>
-      <button type="submit">Add</button>
-    </form>
-  <% } %> -->
-
-  <!-- <section>
-    <h1>Homes</h1>
-    <h2>All the Homes!</h2>
-    <ul>
-      
-    <% homes.forEach(home => { %>
-      <a href="/homes/<%= home._id %> "><div></div><li><%= home.location %> $<%= home.price %></li></div></a>
-    <% }) %>
-    </ul>
-  </section> -->
+<div class="all-cards">
+  <a id="add-home"></a>
+<% homes.forEach(home => { %>
+  <div class="row">
+  <li>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/images/GettyImages-147205632.jpg" alt="Card image cap">
+    <div class="card-body">
+      <div class="city-price">
+      <div><h5 class="card-title"><%= home.location %></h5></div>
+      <div id="price-in-card"><h5 class="card-title">$<%= home.price %></h5></div>
+    </div>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <a href="/homes/<%= home._id %>" class="btn btn-primary">details</a>
+    </div>
+  </div>
+</li>
+</div>
+<% }) %>
+</div>
 
 <%- include('../partials/footer') %>
