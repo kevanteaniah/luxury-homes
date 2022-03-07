@@ -410,11 +410,27 @@ main {
   .edit-delete2{
     display: none;
   }
-
+  
   .btn{
     
-    width: 50px;
+  }
+
+  #float-btn{
+    width:50px;
     margin-bottom: 5px;
+  }
+
+  #deets{
+    margin: auto;
+    width: 100%;
+    height: 5vh;
+    border: 1px solid blue;
+    padding: 5px;
+    
+  }
+
+  .deets{
+    text-decoration: none ;
   }
 
 }
