@@ -1,16 +1,20 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
+
+<div class="full-container">
+<div class="edit-delete" class="elements">
 <% if (home.owner.equals(user?.profile._id)) { %>
   <form action="/homes/<%= home._id %>/edit" method="GET">
-    <button class="btn" type="submit">Edit this House</button>
+    <button type="submit" class="btn btn-outline-primary">Edit</button>
   </form>
   <form action="/homes/<%= home._id %>?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Delete this House</button>
+    <button type="submit" class="btn btn-outline-danger">Delete</button>
   </form>
 <% } %>
+</div>
 
-<div id="show-cards">
+<div id="show-cards" class="elements">
 <div class="card mb-3">
   <img class="card-img-top" src="/images/New Project (2).png" alt="Card image cap">
   <div class="card-body">
@@ -32,6 +36,7 @@
   </div>
 </div>
 </div>
+</div>
 
 <section>
 
@@ -44,9 +49,22 @@ action="/homes/<%= home._id %>/amenities"
 method="post"
 >
   <input type="text" id="amenities">
-  <button type="submit" id="admen-button">Add Amenity</button>
+  <div  >
+  <button type="submit" class="btn btn-primary" id="admen-button" >Add Amenity</button>
+</div>
 </form>
 </div>
+
+<div class="edit-delete2" class="elements">
+  <% if (home.owner.equals(user?.profile._id)) { %>
+    <form action="/homes/<%= home._id %>/edit" method="GET">
+      <button type="submit" class="btn btn-info" id="btn">Edit</button>
+    </form>
+    <form action="/homes/<%= home._id %>?_method=DELETE" method="POST">
+      <button type="submit" class="btn btn-danger" id="btn">Delete</button>
+    </form>
+  <% } %>
+  </div>
 
 
 

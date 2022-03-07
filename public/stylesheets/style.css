@@ -216,6 +216,36 @@ main {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .edit-delete{
+    display: none;
+  }
+
+  .edit-delete2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-weight: 600;
+  }
+
+  .btn{
+    width: 50vw;
+    height: 7vh;
+    
+  }
+  #btn{
+    color: white;
+    font-weight: 600;
+  }
+
+  #admen-button{
+    text-align: center;
+    
+
+  }
   
 
 @media only screen and (min-width: 600px)  {
@@ -339,8 +369,9 @@ main {
   }
   
   #show-cards{
-    margin: auto;
+    margin: auto auto auto 70px ;
     width: 800px;
+    
   }
   #show-display{
     display: flex;
@@ -364,6 +395,26 @@ main {
   }
   #amen-results{
     color: aqua;
+  }
+  
+  .full-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+  }
+  .edit-delete{
+    display: block;
+    margin-top: 100px;
+    margin-left: 25px;
+  }
+  .edit-delete2{
+    display: none;
+  }
+
+  .btn{
+    
+    width: 50px;
+    margin-bottom: 5px;
   }
 
 }
