@@ -25,9 +25,9 @@
       <div><h5 class="card-title">Bathrooms: <span><%= home.bathrooms %></div>
     </div>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis voluptatum repellat itaque sunt dicta architecto eum fugit illum necessitatibus nobis deleniti sint neque, quod quae voluptatem laboriosam aut commodi?</p>
-    <div>
-      <h4>Amenities</h4>
-      <ul>
+    <div class="amen-area">
+      <div><h4>Amenities</h4></div>
+      <div><ul>
       <% if (home.amenities.length) { %>
         <% home.amenities.forEach(function(amenity) { %>
           
@@ -37,6 +37,7 @@
           <li><h3>No Amenities</h3></li>
         <% } %>
       </ul>
+    </div>
     </div>
   </div>
 </div>
@@ -56,10 +57,6 @@
     <img src="/images/rooms/mcclean-design-luxury-kitchen-and-bathroom-cabinet-design-ideas.jpg" alt="..." class="img-thumbnail">
         </a>
   </div>
-  <div><a class="lightbox" href="#pic4">
-    <img src="/images/rooms/office.jpg" alt="..." class="img-thumbnail">
-        </a>
-  </div>
 </div>
 </div>
 <div class="lightbox-target" id="pic1">
@@ -72,10 +69,6 @@
 </div>
 <div class="lightbox-target" id="pic3">
   <img src="/images/rooms/mcclean-design-luxury-kitchen-and-bathroom-cabinet-design-ideas.jpg"/>
-  <a class="lightbox-close" href="#"></a>
-</div>
-<div class="lightbox-target" id="pic4">
-  <img src="/images/rooms/office.jpg"/>
   <a class="lightbox-close" href="#"></a>
 </div>
 
