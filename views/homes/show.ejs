@@ -25,21 +25,61 @@
       <div><h5 class="card-title">Bathrooms: <span><%= home.bathrooms %></div>
     </div>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officiis voluptatum repellat itaque sunt dicta architecto eum fugit illum necessitatibus nobis deleniti sint neque, quod quae voluptatem laboriosam aut commodi?</p>
-    <p class="card-text">
+    <div>
+      <h4>Amenities</h4>
       <ul>
       <% if (home.amenities.length) { %>
         <% home.amenities.forEach(function(amenity) { %>
           
-        <li id="amen-results"><h3><%= amenity.type %></h3></li>
+        <li id="amen-results"><h3 class="amend-text"><%= amenity.type %></h3></li>
         <% }) %>
         <% } else { %>
           <li><h3>No Amenities</h3></li>
         <% } %>
       </ul>
+    </div>
   </div>
 </div>
 </div>
+
+
+<div class="thumb-imgs">
+  <div><a class="lightbox" href="#pic1">
+    <img src="/images/rooms/LuxuryBathroom_featured-894x488-79fc7ffb2ddf9f8d9dec3ac7b19d3a90.png" alt="..." class="img-thumbnail">
+        </a>
+  </div>
+  <div><a class="lightbox" href="#pic2">
+    <img src="/images/rooms/how-to-create-a-luxury-master-bedroom-on-a-budget-1_1024x.webp" alt="..." class="img-thumbnail">
+        </a>
+  </div>
+  <div><a class="lightbox" href="#pic3">
+    <img src="/images/rooms/mcclean-design-luxury-kitchen-and-bathroom-cabinet-design-ideas.jpg" alt="..." class="img-thumbnail">
+        </a>
+  </div>
+  <div><a class="lightbox" href="#pic4">
+    <img src="/images/rooms/office.jpg" alt="..." class="img-thumbnail">
+        </a>
+  </div>
 </div>
+</div>
+<div class="lightbox-target" id="pic1">
+  <img src="/images/rooms/LuxuryBathroom_featured-894x488-79fc7ffb2ddf9f8d9dec3ac7b19d3a90.png"/>
+  <a class="lightbox-close" href="#"></a>
+</div>
+<div class="lightbox-target" id="pic2">
+  <img src="/images/rooms/how-to-create-a-luxury-master-bedroom-on-a-budget-1_1024x.webp"/>
+  <a class="lightbox-close" href="#"></a>
+</div>
+<div class="lightbox-target" id="pic3">
+  <img src="/images/rooms/mcclean-design-luxury-kitchen-and-bathroom-cabinet-design-ideas.jpg"/>
+  <a class="lightbox-close" href="#"></a>
+</div>
+<div class="lightbox-target" id="pic4">
+  <img src="/images/rooms/office.jpg"/>
+  <a class="lightbox-close" href="#"></a>
+</div>
+
+
 
 <section>
 
