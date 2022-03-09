@@ -23,7 +23,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     padding: 0;
-    margin: 0;
+    margin-bottom: 30px;
   
 }
 .blast
@@ -241,6 +241,7 @@ main {
     bottom: 0;
     color: white;
     font-weight: 600;
+    
   }
 
   .btn{
@@ -254,12 +255,12 @@ main {
   }
 
   #admen-button{
-    margin: auto;
+    
 
   }
 
   #addAmen{
-    margin: 0;
+    display: none;
   }
 
   .thumb-imgs{
@@ -268,6 +269,15 @@ main {
   }
 
   .lightbox-target{
+    display: none;
+  }
+  #amen-results{
+    color: rgb(0, 0, 0);
+    list-style: none;
+    display: inline-block;
+    justify-content: space-between;
+  }
+  .amen-form{
     display: none;
   }
   
@@ -422,6 +432,13 @@ main {
     justify-content: space-between;
 
   }
+  #addAmen{
+    display: block;
+  }
+
+  .amen-form{
+    display: block;
+  }
 
   .amend-text{
     font-size: 12px;
@@ -444,6 +461,22 @@ main {
   .all-thumbs{
     display: flex;
     flex-direction: column;
+  }
+
+  #edit-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: auto;
+    padding: 10px;
+  }
+  #edit-btn{
+    background-color: black;
+    color: white;
+    border: none;
   }
 
   #float-btn{
@@ -570,10 +603,14 @@ main {
   .lightbox-target:target a.lightbox-close {
   top: 0;
   }
+
+  #amen-list{
+    margin-right: 5px;
+  }
   
 
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -585,7 +622,7 @@ main {
 ::-webkit-scrollbar-thumb {
   background: rgb(0, 202, 202);
   border-radius: 10px;
-} */
+}
 
 
   

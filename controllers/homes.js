@@ -60,6 +60,7 @@ function edit(req,res){
       price: 'price',
       bedrooms: 'bedrooms',
       bathrooms: 'bathrooms',
+      type: 'type'
     })
   }) .catch(err => {
     console.log(err)

@@ -2,14 +2,31 @@
 <link rel="stylesheet" href="/stylesheets/siwg.css">
 <%- include('../partials/nav') %>
 
-<section>
+<section >
+  <div id="edit-page">
   <h1>Edit the Home!</h1>
+  <% if (home.owner.equals(user?.profile._id)) { %>
   <form action="/homes/<%= home._id %>?_method=PUT" method="POST">
-    <label> Name:  
-      <input type="text"name="location" value="<%= home.location%>" autocomplete="off">
-    </label>
-      <button type="submit">Edit home</button>
+    <div class="input-container name">
+      <label for="location">Location</label>
+      <input class="inputs" type="text" name="location" id="location" placeholder="City/State" autocomplete="off" required>
+    </div>
+    <div class="input-container name">
+      <label for="price">Price</label>
+      <input type="text" name="price" placeholder="Price" autocomplete="off" id="price" required>
+    </div>
+    <div class="input-container name">
+      <label for="bedrooms">Bedrooms</label>
+      <input type="text" name="bedrooms" placeholder="How many bedrooms?" autocomplete="off" id="bedrooms" required >
+    </div>
+    <div class="input-container name">
+      <label for="bathrooms">Bathrooms</label>
+      <input type="text" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" id="location" required > 
+    </div>
+      <button id="edit-btn" type="submit">Edit home</button>
   </form>
+  <% } %>
+</div>
 </section>
 
 
