@@ -9,19 +9,19 @@
   <form action="/homes/<%= home._id %>?_method=PUT" method="POST">
     <div class="input-container name">
       <label for="location">Location</label>
-      <input class="inputs" type="text" name="location" id="location" placeholder="City/State" autocomplete="off" required>
+      <input class="inputs" type="text" name="location" id="location" placeholder="City/State" autocomplete="off">
     </div>
     <div class="input-container name">
       <label for="price">Price</label>
-      <input type="text" name="price" placeholder="Price" autocomplete="off" id="price" required>
+      <input type="text" name="price" placeholder="Price" autocomplete="off" id="price">
     </div>
     <div class="input-container name">
       <label for="bedrooms">Bedrooms</label>
-      <input type="text" name="bedrooms" placeholder="How many bedrooms?" autocomplete="off" id="bedrooms" required >
+      <input type="text" name="bedrooms" placeholder="How many bedrooms?" autocomplete="off" id="bedrooms" >
     </div>
     <div class="input-container name">
       <label for="bathrooms">Bathrooms</label>
-      <input type="text" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" id="location" required > 
+      <input type="text" name="bathrooms" placeholder="How many bathrooms?" autocomplete="off" id="location" > 
     </div>
       <button id="edit-btn" type="submit">Edit home</button>
   </form>

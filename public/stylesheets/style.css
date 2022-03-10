@@ -16,7 +16,6 @@ html {
 :root {
   font-size: 62.5%;
 }
-
 body {
   background-color: rgb(255, 255, 255);
   /* Use a system font, if none are available use an available sans-sarif font */
@@ -24,36 +23,26 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     padding: 0;
     margin-bottom: 30px;
-  
 }
 .blast
 {
   background-color: rgb(170, 24, 24);
 }
-
-
 nav {
   height: auto;
   padding-left: 50px;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 }
-
 nav a {
   font-size: 1.3rem;
 }
-
 .navbar-brand{
   font-size: 1.3rem;
 }
-
-
 .content{
   position: relative;
   display: none;
 }
-
-
-
 .front-page{
   display: flex;
   align-items: center;
@@ -62,33 +51,21 @@ nav a {
   text-align: center;
   height: 80vh;
 }
-
 .front-page-text{
   margin-bottom: 10px;
 }
-
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
-
-.blue-add-btn
-
-#text-head{
-  
-  }
-
   .index-body{
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
   }
-
   .add-home{
     width: 25vw;
     background-color: rgb(243, 243, 243);
@@ -96,10 +73,8 @@ main {
     margin: 10px;
     text-align: center;
   }
-
   .submit{
     margin: auto;
-    
   }
   #submit{
     width: 50%;
@@ -108,16 +83,13 @@ main {
     background-color: rgb(3, 161, 201);
     color: white;
   }
-
   .field{
     height:40px;
     width: 100%;
     border: 1px solid rgb(240, 240, 240);
     margin-bottom: 5px;
   }
-
-  #add-home-link{
-    
+  #add-home-link{ 
     padding: 5px;
     background-color: rgb(4, 201, 236);
     color: rgb(255, 255, 255);
@@ -125,15 +97,11 @@ main {
     font-size: 1.3rem;
     box-shadow: 0 2px 4px -1px rgba(184, 182, 182, 0.25);
   }
-  .add-home-link:visited{
-    
-  }
   #add-home-link:hover{
   transform: scale(1.1);
   background-color: rgb(255, 255, 255);
   color: rgb(0, 217, 255);
   }
-
   .split-screen{
     margin-top: 50px;
     display: flex;
@@ -141,7 +109,6 @@ main {
     
     box-shadow: 0 2px 4px -1px rgba(184, 182, 182, 0.25);
     border-bottom: 1px solid rgb(238, 238, 238); 
-
   }
   .left{
     height:200px
@@ -155,18 +122,15 @@ main {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('../images/IFNO4HS36ZFV3EN3PKLS5BZ6DQ.jpg');
     background-size: cover;
   }
-
   .left .copy{
     color: white;
     text-align: center;
     -webkit-font-smoothing: antialiased;
     -mos-osx-font-smoothing: grayscale;
   }
-
   .left p{
     font-weight: 400;
   }
-
   .right .copy{
     color: black;
     text-align: center;
@@ -175,7 +139,6 @@ main {
     margin: 1.5em 0;
     font-size: 0.875rem;
   }
-
   .right form{
     padding: 25px;
     width: 500px;
@@ -195,13 +158,10 @@ main {
     margin-bottom: 0.5rem;
     font-size: 14px;
   }
-
   .submit{
     text-align:center;
     width: 250px;
   }
-
-  
   .all-cards{
     margin-top: 20px;
     display: flex;
@@ -212,7 +172,6 @@ main {
     flex-wrap: wrap;
     border-top: 1px solid rgb(238, 238, 238);
   }
-
   .all-cards li{
     list-style: none;
     padding: 5px;
@@ -222,17 +181,14 @@ main {
     color: rgb(3, 161, 201);
     font-weight: 400;
   }
-
   #show-display{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-
   .edit-delete{
     display: none;
   }
-
   .edit-delete2{
     width: 100%;
     display: flex;
@@ -241,33 +197,22 @@ main {
     bottom: 0;
     color: white;
     font-weight: 600;
-    
   }
-
   .btn{
     width: 50vw;
     height: 7vh;
-    
   }
   #btn{
     color: white;
     font-weight: 600;
   }
-
-  #admen-button{
-    
-
-  }
-
   #addAmen{
     display: none;
   }
-
   .thumb-imgs{
     padding: 10px;
     
   }
-
   .lightbox-target{
     display: none;
   }
@@ -280,7 +225,6 @@ main {
   .amen-form{
     display: none;
   }
-
   #edit-btn{
     width: 100%;
     background-color: rgb(0, 177, 231);
@@ -289,8 +233,6 @@ main {
     height: 5vh;
     font-weight: bold;
   }
-
-  
   #edit-page{
     display: flex;
     flex-direction: column;
@@ -302,53 +244,23 @@ main {
     padding: 10px;
   }
   
-
-@media only screen and (min-width: 600px)  {
-
-  .front-page{
-    display: flex;
-    flex-direction: row;
-    
-  }
-  .front-page-text{
-    margin-top: -30px;
-    margin-right: 100px;
-    
-  }
-  #text-head{
-    margin-bottom: -20px;
-    }
-  #login{
-
-  }
-
-  #container{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  a{
+  #real-link{
     text-decoration: none;
     color: black;
   }
-
-  a:visited{
+  #real-link:visited{
     color: black;
   }
-
-  a:hover {
+  #real-link:hover{
     transform: scale(1.1);
   }
-
   .real-buy-content{
+    padding-right: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     margin-bottom: -30px;
   }
-
   .real-buy{
     display: flex;
     flex-direction: row;
@@ -362,22 +274,72 @@ main {
     height: 400px;
     text-align: center;
   }
-  img{
+  #front-page-img{
     width: 200px;
   }
+  #front-page-img:hover {
+    transform: scale(1.1);
+  }
+  
 
-  img:hover {
+@media only screen and (min-width: 600px)  {
+
+  .front-page{
+    display: flex;
+    flex-direction: row;
+  }
+  .front-page-text{
+    margin-top: -30px;
+    margin-right: 100px;
+  }
+  #text-head{
+    margin-bottom: -20px;
+  }
+  #container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #real-link{
+    text-decoration: none;
+    color: black;
+  }
+  #real-link:visited{
+    color: black;
+  }
+  #real-link:hover{
+    transform: scale(1.1);
+  }
+  .real-buy-content{
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: -30px;
+  }
+  .real-buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+  }
+  .real-buy-box{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+  }
+  #front-page-img{
+    width: 200px;
+  }
+  #front-page-img:hover {
     transform: scale(1.1);
   }
   .real-content{
     height: 100%;
   }
-  .buy-content{
-    
-  }
-  
   .content{
-    
     display:flex;
     align-items: center;
     justify-content: center;
@@ -385,7 +347,6 @@ main {
     padding-bottom: 20px;
     box-shadow: 0 2px 4px -1px rgba(184, 182, 182, 0.25);
   }
-
   .imgBox{
     height: 300px;
     width: 1000px;
@@ -395,27 +356,22 @@ main {
     flex-direction: column;
     background-image: url('../images/New\ Project\ \(5\).png'); 
   }
-
   p{
     font-size: 1.2rem;
   }
-
   #text-head{
     margin-top: 30px;
   }
-
   #login-text{
     margin-top:30px;
     font-size: 1.5rem;
   }
-
   .textBx{
     width: 30vw;
     height: 100vh;
     margin-top: 70px;
     margin-left: 50px;
   }
-
   .split-screen{
     margin: auto;
     width: 75vw;
@@ -428,12 +384,10 @@ main {
     width: 50%;
     height: auto;
   }
-
   .homes-results {  
     margin: auto;
     padding: 100px;
   }
-
   .all-cards{
     margin-top: 20px;
     display: flex;
@@ -448,26 +402,21 @@ main {
     list-style: none;
     padding: 5px;
   }
-
   .city-price{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-
   #price-in-card{
     color: rgb(3, 161, 201);
     font-weight: 400;
   }
-
   .row{
     margin: 5px;
   }
-  
   #show-cards{
     margin: auto auto auto 70px ;
     width: 800px;
-    
   }
   #show-display{
     display: flex;
@@ -488,28 +437,22 @@ main {
     color: white;
     font-weight: 400;
     font-size: 15px;
-    
   }
-  
   #amen-results{
     color: rgb(0, 0, 0);
     list-style: none;
     display: inline-block;
     justify-content: space-between;
-
   }
   #addAmen{
     display: block;
   }
-
   .amen-form{
     display: block;
   }
-
   .amend-text{
     font-size: 12px;
   }
-  
   .full-container{
     display: flex;
     flex-direction: row;
@@ -523,12 +466,10 @@ main {
   .edit-delete2{
     display: none;
   }
-  
   .all-thumbs{
     display: flex;
     flex-direction: column;
   }
-
   #edit-page{
     display: flex;
     flex-direction: column;
@@ -544,12 +485,10 @@ main {
     color: white;
     border: none;
   }
-
   #float-btn{
     width:50px;
     margin-bottom: 5px;
   }
-
   #deets{
     margin: auto;
     width: 100%;
@@ -559,12 +498,10 @@ main {
     padding: 5px;
     font-weight: 600;
   }
-
   .deets{
     text-decoration: none ;
     color: white;
   }
-
   .thumb-imgs{
     height: auto;
     width: 190px;
@@ -573,7 +510,6 @@ main {
   .lightbox-target{
     display: block;
   }
-
   .lightbox-target {
   position: fixed;
   top: -100%;
@@ -587,7 +523,6 @@ main {
   transition: opacity .5s ease-in-out;
   overflow: hidden;
   }
-  
   .lightbox-target img {
   margin: auto;
   position: absolute;
@@ -606,7 +541,6 @@ main {
   transition: .5s ease-in-out;
     
   }
-  
   a.lightbox-close {
   display: block;
   width:50px;
@@ -622,7 +556,6 @@ main {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   }
-  
   a.lightbox-close:before {
   content: "";
   display: block;
@@ -637,7 +570,6 @@ main {
   -o-transform:rotate(45deg);
   transform:rotate(45deg);
   }
-  
   a.lightbox-close:after {
   content: "";
   display: block;
@@ -652,42 +584,31 @@ main {
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
   }
-  
   .lightbox-target:target {
   opacity: 1;
   top: 0;
   bottom: 0;
     overflow:scroll;
   }
-  
   .lightbox-target:target img {
   max-height: 100%;
   max-width: 100%;
   }
-  
   .lightbox-target:target a.lightbox-close {
   top: 0;
   }
-
   #amen-list{
     margin-right: 5px;
   }
-  
-
 }
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgb(250, 250, 250);
   border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: rgb(0, 202, 202);
   border-radius: 10px;
 }
-
-
-  
