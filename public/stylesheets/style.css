@@ -308,17 +308,18 @@ main {
   .front-page{
     display: flex;
     flex-direction: row;
+    
   }
   .front-page-text{
     margin-top: -30px;
     margin-right: 100px;
+    
   }
   #text-head{
     margin-bottom: -20px;
     }
   #login{
-    
-    
+
   }
 
   #container{
@@ -326,7 +327,53 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
 
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  a:visited{
+    color: black;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
+
+  .real-buy-content{
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: -30px;
+  }
+
+  .real-buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+  }
+  .real-buy-box{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+  }
+  img{
+    width: 200px;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+  .real-content{
+    height: 100%;
+  }
+  .buy-content{
+    
   }
   
   .content{
@@ -346,9 +393,7 @@ main {
     margin-top: 10px;
     display:flex;
     flex-direction: column;
-    background-image: url('../images/New\ Project\ \(5\).png');
-    
-    
+    background-image: url('../images/New\ Project\ \(5\).png'); 
   }
 
   p{
@@ -525,28 +570,6 @@ main {
     width: 190px;
     padding: 10px;
   }
-
-  .real-buy{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-
-  #realBuy{
-    width: 50%;
-    text-align: center;
-  }
-  .real{
-    background-color: aqua;
-  }
-  .buy{
-    background-color: brown;
-  }
-
-
-
   .lightbox-target{
     display: block;
   }

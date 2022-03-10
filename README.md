@@ -43,5 +43,5 @@ Image were found on google
 <div>
   <input type="checkbox" id="scales" name="scales"
          >
-  <label for="scales">Add sounds from real games</label>
+  <label for="scales">Create a page for all appointments</label>
 </div>
