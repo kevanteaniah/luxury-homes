@@ -280,6 +280,27 @@ main {
   .amen-form{
     display: none;
   }
+
+  #edit-btn{
+    width: 100%;
+    background-color: rgb(0, 177, 231);
+    color: white;
+    border: none;
+    height: 5vh;
+    font-weight: bold;
+  }
+
+  
+  #edit-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: auto;
+    padding: 10px;
+  }
   
 
 @media only screen and (min-width: 600px)  {
@@ -504,6 +525,27 @@ main {
     width: 190px;
     padding: 10px;
   }
+
+  .real-buy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  #realBuy{
+    width: 50%;
+    text-align: center;
+  }
+  .real{
+    background-color: aqua;
+  }
+  .buy{
+    background-color: brown;
+  }
+
+
 
   .lightbox-target{
     display: block;

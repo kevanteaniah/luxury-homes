@@ -1,70 +1,47 @@
-# MEN Stack with OAuth Template
+<h1>Luxury</h2>
+ 
 
-This is a MEN Stack template that includes OAuth.
+<a href="https://kg-homes.herokuapp.com/"><h2>View</h2></a>
 
-Use this to go build things! 🚀
+<h2>Origin</h2>
+Luxury is an intranet for a real estate company. CEO Tammy Simone, asked me to design a dual system for her real estate team and for consumers. The consumers only have access to viewing and setting appointments, while the realtors have access to adding and removing homes to the database. Mrs. Simone was so pleased that we are adding more functionality to the app. <br> 
+<br>
+<img src="./public/images/Screenshot%202022-03-10%20111904.png">
 
-## To Use This Template
 
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
 
-```bash
-git clone https://github.com/SEI-Remote/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
+<h2>Credits</h2>
+Image were found on google
 
-Once you are in the project directory:
+<h2>Technologies Used</h2>
+<ul>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>HTML</li>
+  <li>Bootstrap</li>
+  <li>Express</li>
+  <li>MongoDB</li>
 
-```bash
-rm -rf .git
-```
+</ul>
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
-
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
-
-Re-initialize a git repository:
-
-```bash
-git init
-```
-Use whatever method you'd like to get your project on GitHub. If you're looking for speed though use the GitHub CLI to create a new project repository on GitHub:
-
-```bash
-gh repo create <name-of-your-app-here> --public --source .
-```
-Check out the docs [here](https://cli.github.com/manual/gh_repo_create) if you want to learn more about this command. 
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CALLBACK=http://localhost:3000/auth/google/oauth2callback
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
-
-Delete this README.md and finally, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+<h2>Ice Box</h2>
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         >
+  <label for="scales">Add appointment setting system</label>
+</div>
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         >
+  <label for="scales">Change div colors based on availability</label>
+</div>
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         >
+  <label for="scales">Create a responsive homepage</label>
+</div>
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         >
+  <label for="scales">Add sounds from real games</label>
+</div>
