@@ -87,14 +87,12 @@ function update(req,res){
 }
 
 function deleteHome(req,res){
-  Home.findByIdAndDelete(req.params.id)
+  Home.findById(req.params.id)
   .then(home => {
     if (home.owner.equals(req.user.profile._id)){
       home.delete()
-      home.save()
-      .then(() => {
-        res.redirect('/homes')
-      })
+      res.redirect('/homes')
+
     } else {
       throw new Error ('You can not delete this!!!')
     }
@@ -104,21 +102,6 @@ function deleteHome(req,res){
     res.redirect('/homes')
   })
 }
-// function createAmenity(req, res) {
-//   Home.findById(req.user.home._id)
-//   .then(home => {
-//     home.amenities.push(req.body)
-//     home.save()
-//     .then(() => {
-//       res.redirect(`/homes/${req.user.home._id}`)
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.redirect(`/homes/${req.user.home._id}`)
-//     })
-//   })
-// }
-
 function createAmenity(req,res){
   console.log(req.body)
   Home.findById(req.params.id, function(err, home){

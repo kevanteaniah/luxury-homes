@@ -2,6 +2,8 @@
  
 
 <a href="https://kg-homes.herokuapp.com/"><h2>View</h2></a>
+<a href="https://trello.com/b/aVJ57lF1/unit-2"><h2>The Planning</h2></a>
+
 
 <h2>Origin</h2>
 Luxury is an intranet for a real estate company. CEO Tammy Simone, asked me to design a dual system for her real estate team and for consumers. The consumers only have access to viewing and setting appointments, while the realtors have access to adding and removing homes to the database. Mrs. Simone was so pleased that we are adding more functionality to the app. <br> 
