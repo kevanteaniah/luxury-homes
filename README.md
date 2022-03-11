@@ -47,3 +47,13 @@ Image were found on google
          >
   <label for="scales">Create a page for all appointments</label>
 </div>
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         >
+  <label for="scales">Create a profiles system</label>
+</div>
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         >
+  <label for="scales">Create a buyer's system</label>
+</div>
